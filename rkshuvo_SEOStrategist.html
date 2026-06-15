@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rash Kanto is a Dhaka-based SEO Specialist and Strategist with 5 years of experience delivering 40% organic traffic growth, 30% CTR improvement, and 50% backlink growth for digital agencies, SaaS companies, and tech brands.">
+<title>Rash Kanto | SEO Specialist and Strategist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #0a0a0a;
+  color: #e8e4dc;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6 { font-family: 'Outfit', sans-serif; line-height: 1.1; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; font-family: inherit; }
+
+/* ========= TOKENS ========= */
+:root {
+  --bg0: #0a0a0a;
+  --bg1: #111111;
+  --bg2: #161616;
+  --bg3: #1c1c1c;
+  --bg4: #222222;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text: #e8e4dc;
+  --muted: #888580;
+  --dim: #4a4845;
+  --gold: #c9a96e;
+  --gold2: #dbbf85;
+  --gold-bg: rgba(201,169,110,0.07);
+  --gold-border: rgba(201,169,110,0.22);
+  --r: 12px;
+  --r2: 20px;
+}
+
+/* ========= NAV ========= */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px;
+  height: 68px;
+  background: rgba(10,10,10,0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.3s;
+}
+.nav-logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.nav-logo span { color: var(--gold); }
+.nav-links {
+  display: flex; align-items: center; gap: 8px;
+  list-style: none;
+}
+.nav-links a {
+  padding: 7px 16px;
+  font-size: 14px;
+  color: var(--muted);
+  border-radius: 50px;
+  transition: color 0.2s, background 0.2s;
+  font-weight: 400;
+}
+.nav-links a:hover { color: var(--text); background: var(--bg3); }
+.nav-links .nav-btn {
+  background: var(--gold);
+  color: #0a0a0a;
+  font-weight: 600;
+  padding: 8px 20px;
+}
+.nav-links .nav-btn:hover { background: var(--gold2); color: #0a0a0a; }
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--text); border-radius: 2px;
+}
+
+/* ========= HERO ========= */
+.hero {
+  min-height: 100vh;
+  padding: 68px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+.hero-left {
+  padding: 80px 48px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.hero-right {
+  position: relative;
+  background: var(--bg1);
+  border-left: 1px solid var(--border);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-right-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 0;
+  position: relative;
+}
+.hero-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #181510 0%, #0f0d0a 60%, #080706 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 80%, rgba(201,169,110,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 40% at 50% 100%, rgba(201,169,110,0.05) 0%, transparent 60%);
+}
+.hero-silhouette {
+  width: 72%;
+  max-width: 340px;
+  height: 85%;
+  position: relative;
+  z-index: 2;
+}
+.hero-silhouette svg { width: 100%; height: 100%; }
+.hero-grid-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(201,169,110,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,110,0.018) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 16px;
+  border: 1px solid var(--gold-border);
+  border-radius: 50px;
+  background: var(--gold-bg);
+  font-size: 12.5px;
+  color: var(--gold);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+  width: fit-content;
+  animation: rise 0.8s ease both;
+}
+.badge-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold);
+  animation: blink 2.2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+@keyframes rise { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+.hero-name {
+  font-size: clamp(52px, 6.5vw, 88px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  margin-bottom: 12px;
+  animation: rise 0.8s 0.08s ease both;
+}
+.hero-name em {
+  font-style: normal;
+  color: var(--gold);
+  display: block;
+}
+.hero-title-line {
+  font-size: 15px;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  animation: rise 0.8s 0.15s ease both;
+}
+.hero-desc {
+  font-size: 16.5px;
+  color: var(--muted);
+  max-width: 480px;
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 44px;
+  animation: rise 0.8s 0.22s ease both;
+}
+.hero-actions {
+  display: flex; align-items: center; gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  animation: rise 0.8s 0.3s ease both;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-size: 14.5px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.25s;
+}
+.btn-gold { background: var(--gold); color: #0a0a0a; }
+.btn-gold:hover { background: var(--gold2); transform: translateY(-1px); }
+.btn-ghost {
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  font-weight: 400;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.btn-ghost:hover { border-color: var(--gold-border); color: var(--gold); }
+.hero-scroll {
+  display: flex; align-items: center; gap: 14px;
+  animation: rise 0.8s 0.4s ease both;
+}
+.scroll-track {
+  width: 50px; height: 1px;
+  background: var(--dim);
+  position: relative; overflow: hidden;
+}
+.scroll-track::after {
+  content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
+  background: var(--gold);
+  animation: runline 2s 1.5s infinite;
+}
+@keyframes runline { to{left:100%} }
+.hero-scroll span {
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+/* hero right overlay tags */
+.hero-tag {
+  position: absolute;
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  animation: rise 1s ease both;
+}
+.hero-tag-1 { top: 22%; right: 8%; animation-delay: 0.5s; }
+.hero-tag-2 { top: 38%; left: 5%; animation-delay: 0.65s; }
+.hero-tag-3 { bottom: 22%; right: 6%; animation-delay: 0.8s; }
+.hero-tag small { display: block; font-size: 11px; color: var(--gold); margin-bottom: 1px; font-weight: 400; }
+
+/* ========= TICKER ========= */
+.ticker {
+  overflow: hidden;
+  background: var(--bg1);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+.ticker-track {
+  display: flex; gap: 0;
+  width: max-content;
+  animation: tick 28s linear infinite;
+}
+@keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.ticker-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 0 32px;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--dim);
+  white-space: nowrap;
+}
+.ticker-sep { color: var(--gold); font-size: 14px; }
+
+/* ========= SECTION COMMONS ========= */
+.section { padding: 110px 48px; }
+.section-inner { max-width: 1280px; margin: 0 auto; }
+.label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.label::before { content:''; display:block; width:22px; height:1.5px; background:var(--gold); }
+.sec-h { font-size: clamp(34px, 4vw, 56px); font-weight: 800; letter-spacing: -0.03em; }
+.sec-p { font-size: 16px; color: var(--muted); font-weight: 300; line-height: 1.75; max-width: 500px; }
+
+/* ========= SERVICES (equiv. specialties) ========= */
+.services { background: var(--bg0); }
+.services-intro {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: end;
+  margin-bottom: 72px;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+}
+.svc-card {
+  background: var(--bg0);
+  padding: 48px 36px 44px;
+  transition: background 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+.svc-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--gold-bg) 0%, transparent 60%);
+  opacity: 0; transition: opacity 0.35s;
+}
+.svc-card:hover { background: var(--bg1); }
+.svc-card:hover::after { opacity: 1; }
+.svc-num {
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--dim); margin-bottom: 28px; display: block;
+  font-family: 'Outfit', sans-serif;
+}
+.svc-icon {
+  width: 52px; height: 52px;
+  border: 1px solid var(--border2);
+  border-radius: var(--r);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; margin-bottom: 28px;
+  position: relative; z-index: 1;
+  transition: border-color 0.3s;
+}
+.svc-card:hover .svc-icon { border-color: var(--gold-border); }
+.svc-card h3 {
+  font-size: 23px; font-weight: 700;
+  letter-spacing: -0.025em; margin-bottom: 16px;
+  position: relative; z-index: 1;
+}
+.svc-card p {
+  font-size: 14px; color: var(--muted); line-height: 1.8; font-weight: 300;
+  position: relative; z-index: 1;
+}
+.svc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 24px; position: relative; z-index: 1; }
+.svc-tag {
+  padding: 4px 12px; border: 1px solid var(--border);
+  border-radius: 50px; font-size: 11px; color: var(--dim);
+  transition: border-color 0.3s, color 0.3s;
+}
+.svc-card:hover .svc-tag { border-color: var(--gold-border); color: var(--gold); }
+
+/* ========= LATEST WORK ========= */
+.work { background: var(--bg1); }
+.work-hdr {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 52px;
+}
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.wcard {
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+  background: var(--bg2);
+  transition: border-color 0.3s, transform 0.35s;
+}
+.wcard:hover { border-color: var(--gold-border); transform: translateY(-5px); }
+.wcard-vis {
+  width: 100%; height: 230px;
+  position: relative; overflow: hidden;
+  background: var(--bg3);
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.wcard-vis canvas-bg {
+  position: absolute; inset: 0;
+}
+.wcard.wide { grid-column: 1 / -1; }
+.wcard.wide .wcard-vis { height: 300px; }
+.wcard-body { padding: 26px 26px 30px; }
+.wcard-type {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 9px; font-weight: 500;
+}
+.wcard h3 { font-size: 21px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 10px; }
+.wcard p { font-size: 14px; color: var(--muted); line-height: 1.75; font-weight: 300; margin-bottom: 20px; }
+.wcard-metrics { display: flex; gap: 22px; flex-wrap: wrap; }
+.wm { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+.wm strong { color: var(--gold); font-family: 'Outfit', sans-serif; font-weight: 700; }
+
+/* bar chart decorative */
+.bars { display: flex; align-items: flex-end; gap: 5px; width: 100%; height: 100%; padding: 24px 28px 0; }
+.bar-col { flex: 1; border-radius: 3px 3px 0 0; }
+
+/* line chart decorative */
+.chart-wrap { position: relative; width: 100%; height: 100%; }
+.chart-svg { position: absolute; inset: 0; }
+
+/* ========= EXPERIENCE ========= */
+.exp { background: var(--bg0); }
+.exp-layout { display: grid; grid-template-columns: 1.05fr 1fr; gap: 80px; align-items: start; margin-top: 64px; }
+.exp-list { display: flex; flex-direction: column; }
+.exp-row {
+  display: flex; gap: 20px; padding: 26px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.exp-row:first-child { border-top: 1px solid var(--border); }
+.exp-dot-wrap { padding-top: 6px; }
+.exp-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  border: 1.5px solid var(--dim);
+  background: transparent;
+  transition: background 0.3s, border-color 0.3s;
+}
+.exp-row:hover .exp-dot, .exp-row.on .exp-dot { background: var(--gold); border-color: var(--gold); }
+.exp-meta { flex: 1; }
+.exp-role {
+  font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 700;
+  letter-spacing: -0.02em; margin-bottom: 3px;
+  transition: color 0.2s;
+}
+.exp-row:hover .exp-role, .exp-row.on .exp-role { color: var(--gold); }
+.exp-co { font-size: 13.5px; color: var(--muted); margin-bottom: 2px; }
+.exp-date { font-size: 12px; color: var(--dim); letter-spacing: 0.04em; }
+.exp-arrow { font-size: 17px; color: var(--dim); margin-top: 3px; transition: color 0.2s, transform 0.2s; }
+.exp-row:hover .exp-arrow, .exp-row.on .exp-arrow { color: var(--gold); transform: translateX(4px); }
+.exp-panel {
+  position: sticky; top: 88px;
+}
+.exp-card {
+  border: 1px solid var(--border); border-radius: var(--r2);
+  padding: 38px; background: var(--bg1);
+}
+.exp-card-badge {
+  display: inline-block; padding: 5px 14px;
+  background: var(--gold-bg); border: 1px solid var(--gold-border);
+  border-radius: 50px; font-size: 11px; color: var(--gold);
+  letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 20px;
+}
+.exp-card-role { font-size: 27px; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 4px; }
+.exp-card-co { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+.exp-list-items { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.exp-list-items li {
+  font-size: 14px; color: var(--muted); line-height: 1.7; font-weight: 300;
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.exp-list-items li::before {
+  content: ''; flex-shrink: 0; margin-top: 8px;
+  width: 4px; height: 4px; border-radius: 50%; background: var(--gold);
+}
+
+/* ========= WHY ME ========= */
+.why { background: var(--bg1); }
+.why-top { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 60px; }
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.why-card {
+  border: 1px solid var(--border); border-radius: var(--r2);
+  padding: 38px; background: var(--bg2);
+  display: flex; flex-direction: column;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.why-card:hover { border-color: var(--gold-border); transform: translateY(-4px); }
+.why-card.gold-card {
+  background: var(--gold); border-color: var(--gold); color: #0a0a0a;
+}
+.why-num { font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--dim); margin-bottom: 22px; }
+.why-card.gold-card .why-num { color: rgba(10,10,10,0.4); }
+.why-card h3 { font-size: 21px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 13px; }
+.why-card.gold-card h3 { color: #0a0a0a; }
+.why-card p { font-size: 14px; line-height: 1.8; font-weight: 300; color: var(--muted); flex: 1; }
+.why-card.gold-card p { color: rgba(10,10,10,0.62); }
+.why-icon {
+  width: 46px; height: 46px; border-radius: var(--r);
+  border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; margin-bottom: 22px;
+}
+.why-card.gold-card .why-icon { border-color: rgba(10,10,10,0.18); }
+
+/* ========= TESTIMONIALS ========= */
+.testimonials { background: var(--bg0); overflow: hidden; }
+.testimonials .section-inner { overflow: visible; }
+.testi-hdr { margin-bottom: 60px; }
+.testi-row { overflow: hidden; position: relative; }
+.testi-row::before {
+  content:''; position:absolute; left:0; top:0; bottom:0; width:100px;
+  background: linear-gradient(90deg, var(--bg0), transparent); z-index:2; pointer-events:none;
+}
+.testi-row::after {
+  content:''; position:absolute; right:0; top:0; bottom:0; width:100px;
+  background: linear-gradient(270deg, var(--bg0), transparent); z-index:2; pointer-events:none;
+}
+.testi-track {
+  display: flex; gap: 16px; width: max-content;
+  animation: tick 38s linear infinite;
+  padding: 6px 0;
+}
+.testi-track:hover { animation-play-state: paused; }
+.tcard {
+  width: 370px; flex-shrink: 0;
+  border: 1px solid var(--border); border-radius: var(--r2);
+  padding: 28px; background: var(--bg1);
+  transition: border-color 0.3s;
+}
+.tcard:hover { border-color: var(--gold-border); }
+.tcard-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+.star { color: var(--gold); font-size: 13px; }
+.tcard-quote {
+  font-size: 14.5px; line-height: 1.75; color: var(--text);
+  font-weight: 300; font-style: italic; margin-bottom: 22px;
+}
+.tcard-author { display: flex; align-items: center; gap: 12px; }
+.tcard-av {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--bg3); border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Outfit', sans-serif; font-weight: 700;
+  font-size: 13px; color: var(--gold); flex-shrink: 0;
+}
+.tcard-name { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: -0.01em; }
+.tcard-role { font-size: 12px; color: var(--dim); }
+
+/* ========= FAQ ========= */
+.faq { background: var(--bg2); }
+.faq-wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 90px; align-items: start; }
+.faq-left { position: sticky; top: 88px; }
+.faq-left .sec-p { margin-top: 20px; }
+.faq-contact {
+  margin-top: 40px; padding: 28px;
+  border: 1px solid var(--border); border-radius: var(--r2);
+  background: var(--bg1);
+}
+.faq-contact p { font-size: 14px; color: var(--muted); margin-bottom: 16px; font-weight: 300; line-height: 1.7; }
+.faq-contact a {
+  font-size: 14px; color: var(--gold); font-weight: 500;
+  display: flex; align-items: center; gap: 6px;
+  transition: gap 0.2s;
+}
+.faq-contact a:hover { gap: 10px; }
+.faq-list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:first-child { border-top: 1px solid var(--border); }
+.faq-btn {
+  width: 100%; padding: 22px 0; background: none; border: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  text-align: left; color: var(--text);
+  font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 600;
+  letter-spacing: -0.01em; transition: color 0.2s;
+}
+.faq-btn:hover { color: var(--gold); }
+.faq-btn.open { color: var(--gold); }
+.faq-plus {
+  font-size: 22px; color: var(--dim); flex-shrink: 0;
+  transition: transform 0.35s, color 0.2s; line-height: 1;
+}
+.faq-btn.open .faq-plus { transform: rotate(45deg); color: var(--gold); }
+.faq-body {
+  overflow: hidden; max-height: 0;
+  transition: max-height 0.4s ease, padding 0.3s;
+}
+.faq-body.open { max-height: 320px; }
+.faq-body p {
+  font-size: 14.5px; color: var(--muted); line-height: 1.8;
+  font-weight: 300; padding-bottom: 24px;
+}
+
+/* ========= BLOG ========= */
+.blog { background: var(--bg0); }
+.blog-hdr { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 56px; }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.bcard {
+  border: 1px solid var(--border); border-radius: var(--r2);
+  overflow: hidden; background: var(--bg1);
+  transition: border-color 0.3s, transform 0.35s;
+}
+.bcard:hover { border-color: var(--gold-border); transform: translateY(-5px); }
+.bcard-img {
+  width: 100%; height: 185px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.bcard-body { padding: 22px 22px 26px; }
+.bcard-date { font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--dim); margin-bottom: 10px; }
+.bcard h3 { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; margin-bottom: 10px; }
+.bcard p { font-size: 13.5px; color: var(--muted); line-height: 1.7; font-weight: 300; margin-bottom: 18px; }
+.bcard-link {
+  font-size: 13px; color: var(--gold); font-weight: 500;
+  display: flex; align-items: center; gap: 5px; transition: gap 0.2s;
+}
+.bcard:hover .bcard-link { gap: 9px; }
+
+/* ========= CTA ========= */
+.cta-section {
+  background: var(--bg1); border-top: 1px solid var(--border);
+  padding: 120px 48px; text-align: center; position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width: 700px; height: 400px;
+  background: radial-gradient(ellipse, rgba(201,169,110,0.055) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-section h2 { font-size: clamp(40px, 5vw, 72px); font-weight: 800; letter-spacing: -0.035em; margin-bottom: 20px; position: relative; z-index: 1; }
+.cta-section h2 em { font-style: normal; color: var(--gold); }
+.cta-section p { font-size: 17px; color: var(--muted); max-width: 460px; margin: 0 auto 44px; font-weight: 300; line-height: 1.75; position: relative; z-index: 1; }
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+.skill-cloud { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 52px; position: relative; z-index: 1; }
+.skill-pill {
+  padding: 6px 16px; border: 1px solid var(--border);
+  border-radius: 50px; font-size: 12px; color: var(--muted);
+  transition: all 0.25s;
+}
+.skill-pill:hover { border-color: var(--gold-border); color: var(--gold); }
+
+/* ========= FOOTER ========= */
+.footer {
+  background: var(--bg2); border-top: 1px solid var(--border);
+  padding: 80px 48px 40px;
+}
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+.footer-logo { font-family:'Outfit',sans-serif; font-weight:800; font-size:19px; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:16px; }
+.footer-logo span { color: var(--gold); }
+.footer-brand p { font-size:13.5px; color:var(--muted); line-height:1.75; font-weight:300; max-width:270px; margin-bottom:24px; }
+.socials { display:flex; gap:10px; }
+.soc {
+  width:38px; height:38px; border:1px solid var(--border); border-radius:var(--r);
+  display:flex; align-items:center; justify-content:center; font-size:13px;
+  color:var(--muted); font-weight:700; font-family:'Outfit',sans-serif;
+  transition:all 0.25s;
+}
+.soc:hover { border-color:var(--gold-border); color:var(--gold); background:var(--gold-bg); }
+.footer-col h4 { font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--dim); margin-bottom:20px; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:11px; }
+.footer-col ul a { font-size:13.5px; color:var(--muted); font-weight:300; transition:color 0.2s; }
+.footer-col ul a:hover { color:var(--text); }
+.footer-bottom {
+  border-top:1px solid var(--border); padding-top:26px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.footer-bottom p { font-size:12.5px; color:var(--dim); }
+
+/* ========= REVEAL ========= */
+.rr { opacity:0; transform:translateY(28px); transition:opacity 0.75s ease, transform 0.75s ease; }
+.rr.in { opacity:1; transform:translateY(0); }
+.rr.d1 { transition-delay: 0.08s; }
+.rr.d2 { transition-delay: 0.18s; }
+.rr.d3 { transition-delay: 0.28s; }
+
+/* ========= RESPONSIVE ========= */
+@media(max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display:none; }
+  .services-intro { grid-template-columns:1fr; gap:30px; }
+  .services-grid { grid-template-columns:1fr; }
+  .exp-layout { grid-template-columns:1fr; gap:40px; }
+  .exp-panel { position:static; }
+  .why-top { grid-template-columns:1fr; gap:30px; }
+  .faq-wrap { grid-template-columns:1fr; gap:48px; }
+  .faq-left { position:static; }
+  .blog-grid { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; gap:40px; }
+  .nav-links { display:none; }
+  .nav-hamburger { display:flex; }
+  .work-grid { grid-template-columns:1fr; }
+  .wcard.wide { grid-column:1; }
+  .why-grid { grid-template-columns:1fr; }
+}
+@media(max-width: 600px) {
+  .section { padding: 80px 22px; }
+  .nav { padding: 0 22px; }
+  .hero-left { padding: 80px 22px 60px; }
+  .cta-section { padding: 80px 22px; }
+  .footer { padding: 60px 22px 30px; }
+  .footer-grid { grid-template-columns:1fr; }
+  .hero-stats-row { gap: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav class="nav">
+  <a href="#" class="nav-logo">RASH<span>KANTO</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#blog">Insights</a></li>
+    <li><a href="#contact" class="nav-btn">Hire Me</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Open to Senior SEO and Lead Roles
+    </div>
+    <h1 class="hero-name">
+      Rash
+      <em>Kanto</em>
+    </h1>
+    <div class="hero-title-line">SEO Specialist &amp; Strategist &nbsp;|&nbsp; Dhaka, Bangladesh</div>
+    <p class="hero-desc">
+      I help digital agencies, SaaS companies, and tech brands grow organic traffic
+      that connects directly to revenue. Technical audits, content strategy, link
+      building, and reporting built around results you can measure.
+    </p>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-gold">View Case Studies &#8594;</a>
+      <a href="https://www.linkedin.com/in/rkshuvo209/" target="_blank" class="btn btn-ghost">LinkedIn Profile</a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-track"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-img-placeholder">
+      <!-- Decorative profile silhouette + stats -->
+      <svg class="hero-silhouette" viewBox="0 0 300 480" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="gg" x1="150" y1="0" x2="150" y2="480" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- body silhouette -->
+        <ellipse cx="150" cy="118" rx="62" ry="62" fill="url(#gg)" opacity="0.18"/>
+        <ellipse cx="150" cy="118" rx="48" ry="48" fill="#c9a96e" opacity="0.1"/>
+        <path d="M48 480 C48 340 80 290 150 290 C220 290 252 340 252 480Z" fill="url(#gg)" opacity="0.22"/>
+        <!-- head outline -->
+        <circle cx="150" cy="118" r="62" stroke="#c9a96e" stroke-width="1" opacity="0.25"/>
+        <!-- face features very subtle -->
+        <circle cx="150" cy="113" r="28" fill="#c9a96e" opacity="0.06"/>
+        <!-- dotted scan lines -->
+        <line x1="48" y1="200" x2="252" y2="200" stroke="#c9a96e" stroke-width="0.4" stroke-dasharray="4 6" opacity="0.2"/>
+        <line x1="48" y1="230" x2="252" y2="230" stroke="#c9a96e" stroke-width="0.4" stroke-dasharray="4 6" opacity="0.15"/>
+        <line x1="48" y1="260" x2="252" y2="260" stroke="#c9a96e" stroke-width="0.4" stroke-dasharray="4 6" opacity="0.1"/>
+        <!-- corner brackets -->
+        <path d="M30 60 L30 30 L60 30" stroke="#c9a96e" stroke-width="1.5" stroke-opacity="0.4"/>
+        <path d="M270 60 L270 30 L240 30" stroke="#c9a96e" stroke-width="1.5" stroke-opacity="0.4"/>
+        <path d="M30 420 L30 450 L60 450" stroke="#c9a96e" stroke-width="1.5" stroke-opacity="0.4"/>
+        <path d="M270 420 L270 450 L240 450" stroke="#c9a96e" stroke-width="1.5" stroke-opacity="0.4"/>
+      </svg>
+
+      <!-- Floating stat cards -->
+      <div class="hero-tag hero-tag-1" aria-hidden="true">
+        <small>Organic Growth</small>
+        +40% Traffic
+      </div>
+      <div class="hero-tag hero-tag-2" aria-hidden="true">
+        <small>CTR Lift</small>
+        +30% in 6 months
+      </div>
+      <div class="hero-tag hero-tag-3" aria-hidden="true">
+        <small>Backlink Growth</small>
+        +50% DA Boost
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TICKER ====== -->
+<div class="ticker">
+  <div class="ticker-track">
+    <div class="ticker-item">Google Search Console <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">Google Analytics 4 <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">SEMrush <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">Ahrefs <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">Screaming Frog <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">Core Web Vitals <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">PageSpeed Insights <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">Structured Data <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">E-E-A-T Framework <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">AI Search Optimization <span class="ticker-sep">&#10022;</span></div>
+    <!-- duplicate for loop -->
+    <div class="ticker-item">Google Search Console <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">Google Analytics 4 <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">SEMrush <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">Ahrefs <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">Screaming Frog <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">Core Web Vitals <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">PageSpeed Insights <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">Structured Data <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">E-E-A-T Framework <span class="ticker-sep">&#10022;</span></div>
+    <div class="ticker-item">AI Search Optimization <span class="ticker-sep">&#10022;</span></div>
+  </div>
+</div>
+
+<!-- ====== SERVICES ====== -->
+<section class="section services rr" id="services">
+  <div class="section-inner">
+    <div class="services-intro">
+      <div>
+        <div class="label">What I Do</div>
+        <h2 class="sec-h">Full-Stack SEO,<br>From Root to Result</h2>
+      </div>
+      <p class="sec-p">
+        I cover every layer of organic search: technical infrastructure, on-page
+        content architecture, off-page authority building, and performance
+        reporting that connects directly to what leadership actually cares about.
+      </p>
+    </div>
+    <div class="services-grid">
+
+      <div class="svc-card">
+        <span class="svc-num">01</span>
+        <div class="svc-icon">&#9881;</div>
+        <h3>Technical SEO</h3>
+        <p>
+          I read server logs, audit crawl budgets, fix Core Web Vitals issues,
+          and implement structured data correctly. My Computer Science background
+          means I work directly with developers without needing a translator between
+          engineering and SEO. Issues get caught before they become traffic losses.
+        </p>
+        <div class="svc-tags">
+          <span class="svc-tag">Core Web Vitals</span>
+          <span class="svc-tag">Schema Markup</span>
+          <span class="svc-tag">Crawl Budget</span>
+          <span class="svc-tag">Mobile UX</span>
+          <span class="svc-tag">Site Speed</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-num">02</span>
+        <div class="svc-icon">&#128203;</div>
+        <h3>On-Page Strategy</h3>
+        <p>
+          Every on-page decision I make starts with search intent data from
+          Google Search Console. I build content cluster architectures, write
+          intent-matched title tags and meta descriptions, structure internal
+          linking, and align pages to the exact queries your audience types
+          into search every day.
+        </p>
+        <div class="svc-tags">
+          <span class="svc-tag">Content Clusters</span>
+          <span class="svc-tag">Keyword Research</span>
+          <span class="svc-tag">Meta Optimization</span>
+          <span class="svc-tag">E-E-A-T</span>
+          <span class="svc-tag">Semantic Search</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-num">03</span>
+        <div class="svc-icon">&#128279;</div>
+        <h3>Off-Page and Authority</h3>
+        <p>
+          I build backlink portfolios through targeted niche outreach programs,
+          not bulk link farms. My focus is on industry directories, local press,
+          and sector publications that genuinely strengthen domain authority and
+          bring qualified referral traffic alongside the ranking improvements.
+        </p>
+        <div class="svc-tags">
+          <span class="svc-tag">Link Acquisition</span>
+          <span class="svc-tag">Domain Authority</span>
+          <span class="svc-tag">Digital PR</span>
+          <span class="svc-tag">Local SEO</span>
+          <span class="svc-tag">Competitor Analysis</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== LATEST WORK ====== -->
+<section class="section work rr" id="work">
+  <div class="section-inner">
+    <div class="work-hdr">
+      <div>
+        <div class="label">Case Studies</div>
+        <h2 class="sec-h">Latest Work</h2>
+      </div>
+      <p class="sec-p" style="text-align:right; max-width:320px;">
+        Real campaigns, real numbers. Every project started with a clear problem
+        and ended with measurable organic growth.
+      </p>
+    </div>
+
+    <div class="work-grid">
+
+      <!-- FEATURED -->
+      <div class="wcard wide">
+        <div class="wcard-vis" style="background: linear-gradient(140deg, #0d160e 0%, #0c0c0a 100%);">
+          <svg width="100%" height="100%" viewBox="0 0 880 300" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="barg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#c9a96e" stop-opacity="0.2"/>
+              </linearGradient>
+            </defs>
+            <!-- baseline -->
+            <line x1="40" y1="270" x2="840" y2="270" stroke="#2a2820" stroke-width="1"/>
+            <!-- bars showing growth -->
+            <rect x="60" y="220" width="60" height="50" rx="3" fill="#c9a96e" fill-opacity="0.1"/>
+            <rect x="140" y="200" width="60" height="70" rx="3" fill="#c9a96e" fill-opacity="0.15"/>
+            <rect x="220" y="195" width="60" height="75" rx="3" fill="#c9a96e" fill-opacity="0.18"/>
+            <rect x="300" y="175" width="60" height="95" rx="3" fill="#c9a96e" fill-opacity="0.25"/>
+            <rect x="380" y="155" width="60" height="115" rx="3" fill="#c9a96e" fill-opacity="0.35"/>
+            <rect x="460" y="130" width="60" height="140" rx="3" fill="#c9a96e" fill-opacity="0.45"/>
+            <rect x="540" y="105" width="60" height="165" rx="3" fill="#c9a96e" fill-opacity="0.58"/>
+            <rect x="620" y="80" width="60" height="190" rx="3" fill="#c9a96e" fill-opacity="0.72"/>
+            <rect x="700" y="50" width="60" height="220" rx="3" fill="url(#barg)"/>
+            <rect x="780" y="30" width="60" height="240" rx="3" fill="#c9a96e"/>
+            <!-- label -->
+            <text x="820" y="22" font-family="Outfit,sans-serif" font-size="11" fill="#c9a96e" fill-opacity="0.7" text-anchor="middle" letter-spacing="1">+40%</text>
+          </svg>
+          <!-- overlay stats -->
+          <div style="position:absolute;top:22px;left:28px;">
+            <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;font-family:Outfit,sans-serif;">Organic Traffic Growth</div>
+            <div style="font-family:Outfit,sans-serif;font-size:48px;font-weight:800;color:var(--text);letter-spacing:-0.04em;line-height:1;">40%</div>
+            <div style="font-size:13px;color:var(--muted);">achieved in 9 months</div>
+          </div>
+        </div>
+        <div class="wcard-body">
+          <div class="wcard-type">Technical SEO + On-Page + Reporting</div>
+          <h3>Sales Ninja Training</h3>
+          <p>
+            The site had over 150 indexed pages, 200+ crawl errors, and Core Web Vitals scores
+            well below passing thresholds. I rebuilt the full technical infrastructure, rewrote title
+            tags and meta descriptions across all high-impression pages using intent-matched copy
+            from GSC data, and connected GA4, Google Search Console, and SEMrush into a single
+            same-day reporting dashboard. Organic traffic grew 40% in 9 months and CTR improved
+            by 30% within 6 months.
+          </p>
+          <div class="wcard-metrics">
+            <div class="wm"><strong>+40%</strong> Organic Traffic</div>
+            <div class="wm"><strong>+30%</strong> CTR Lift</div>
+            <div class="wm"><strong>200+</strong> Errors Fixed</div>
+            <div class="wm"><strong>+25%</strong> Publishing Output</div>
+            <div class="wm"><strong>7 days &#8594; same-day</strong> Reporting</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="wcard">
+        <div class="wcard-vis" style="background: linear-gradient(140deg, #100e16 0%, #0c0c0a 100%);">
+          <svg width="100%" height="100%" viewBox="0 0 440 230" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="lineg" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.1"/>
+                <stop offset="100%" stop-color="#c9a96e" stop-opacity="0.7"/>
+              </linearGradient>
+            </defs>
+            <polyline points="20,190 70,180 130,165 190,145 250,118 310,90 370,62 420,38" stroke="url(#lineg)" stroke-width="2" fill="none"/>
+            <polygon points="20,190 70,180 130,165 190,145 250,118 310,90 370,62 420,38 420,210 20,210" fill="#c9a96e" fill-opacity="0.04"/>
+            <circle cx="420" cy="38" r="5" fill="#c9a96e"/>
+            <text x="390" y="28" font-family="Outfit" font-size="12" fill="#c9a96e" text-anchor="middle" font-weight="700">+50%</text>
+          </svg>
+          <div style="position:absolute;bottom:18px;left:20px;">
+            <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;font-family:Outfit,sans-serif;">Backlink Portfolio</div>
+            <div style="font-family:Outfit,sans-serif;font-size:32px;font-weight:800;color:var(--text);letter-spacing:-0.035em;line-height:1;">+50%</div>
+          </div>
+        </div>
+        <div class="wcard-body">
+          <div class="wcard-type">Link Building + On-Page + Reporting</div>
+          <h3>DOM-INNO Real Estate Portal</h3>
+          <p>
+            A real-estate portal losing organic market share despite publishing regular content.
+            I overhauled on-page structure across the full site, rebuilt the content cluster
+            strategy around buyer-intent queries, and launched a niche outreach program
+            targeting real-estate directories and local press to build domain authority.
+          </p>
+          <div class="wcard-metrics">
+            <div class="wm"><strong>+40%</strong> Organic Traffic</div>
+            <div class="wm"><strong>+50%</strong> Backlinks</div>
+            <div class="wm"><strong>+20%</strong> Domain Authority</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="wcard">
+        <div class="wcard-vis" style="background: linear-gradient(140deg, #0e1410 0%, #0c0c0a 100%);">
+          <svg width="100%" height="100%" viewBox="0 0 440 230" preserveAspectRatio="none" aria-hidden="true">
+            <rect x="30" y="60" width="46" height="150" rx="3" fill="#c9a96e" fill-opacity="0.12"/>
+            <rect x="100" y="80" width="46" height="130" rx="3" fill="#c9a96e" fill-opacity="0.18"/>
+            <rect x="170" y="40" width="46" height="170" rx="3" fill="#c9a96e" fill-opacity="0.28"/>
+            <rect x="240" y="20" width="46" height="190" rx="3" fill="#c9a96e" fill-opacity="0.45"/>
+            <rect x="310" y="10" width="46" height="200" rx="3" fill="#c9a96e" fill-opacity="0.65"/>
+            <rect x="380" y="5" width="46" height="205" rx="3" fill="#c9a96e"/>
+            <text x="403" y="0" font-family="Outfit" font-size="0" fill="none"/>
+          </svg>
+          <div style="position:absolute;top:18px;right:20px;">
+            <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;font-family:Outfit,sans-serif;text-align:right;">Avg. Traffic Growth</div>
+            <div style="font-family:Outfit,sans-serif;font-size:32px;font-weight:800;color:var(--text);letter-spacing:-0.035em;line-height:1;text-align:right;">+40%</div>
+            <div style="font-size:12px;color:var(--muted);text-align:right;">per client</div>
+          </div>
+        </div>
+        <div class="wcard-body">
+          <div class="wcard-type">Multi-Client SEO + Team Leadership</div>
+          <h3>MicroDeft Agency Accounts</h3>
+          <p>
+            Three client websites with no coherent SEO strategy in place. I built full-funnel
+            strategies for all three simultaneously, rebuilt keyword architecture from scratch
+            using Ahrefs and SEMrush, and led a 6-person SEO team to 100% on-time delivery
+            across 18 consecutive months.
+          </p>
+          <div class="wcard-metrics">
+            <div class="wm"><strong>+40%</strong> Per Client</div>
+            <div class="wm"><strong>+30%</strong> Brand Visibility</div>
+            <div class="wm"><strong>100%</strong> On-Time Delivery</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== EXPERIENCE ====== -->
+<section class="section exp rr" id="experience">
+  <div class="section-inner">
+    <div class="label">Career</div>
+    <h2 class="sec-h" style="margin-bottom:0;">Work Experience</h2>
+    <div class="exp-layout">
+      <div class="exp-list" id="expList">
+
+        <div class="exp-row on" data-i="0">
+          <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+          <div class="exp-meta">
+            <div class="exp-role">Senior SEO Specialist</div>
+            <div class="exp-co">Sales Ninja Training, Uttara, Dhaka</div>
+            <div class="exp-date">March 2024 to Present</div>
+          </div>
+          <div class="exp-arrow">&#8594;</div>
+        </div>
+
+        <div class="exp-row" data-i="1">
+          <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+          <div class="exp-meta">
+            <div class="exp-role">SEO Specialist</div>
+            <div class="exp-co">DOM-INNO Developments Ltd., Banani</div>
+            <div class="exp-date">January 2023 to February 2024</div>
+          </div>
+          <div class="exp-arrow">&#8594;</div>
+        </div>
+
+        <div class="exp-row" data-i="2">
+          <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+          <div class="exp-meta">
+            <div class="exp-role">SEO Specialist</div>
+            <div class="exp-co">MicroDeft, Banasree, Dhaka</div>
+            <div class="exp-date">March 2021 to December 2022</div>
+          </div>
+          <div class="exp-arrow">&#8594;</div>
+        </div>
+
+        <div class="exp-row" data-i="3">
+          <div class="exp-dot-wrap"><div class="exp-dot"></div></div>
+          <div class="exp-meta">
+            <div class="exp-role">Assistant Network Engineer</div>
+            <div class="exp-co">Bangladesh Water Development Board</div>
+            <div class="exp-date">January 2020 to December 2020</div>
+          </div>
+          <div class="exp-arrow">&#8594;</div>
+        </div>
+
+      </div>
+
+      <div class="exp-panel" id="expPanel"><!-- filled by JS --></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== WHY ME ====== -->
+<section class="section why rr" id="why">
+  <div class="section-inner">
+    <div class="why-top">
+      <div>
+        <div class="label">Why Choose Me</div>
+        <h2 class="sec-h">What Makes<br>This Work Different</h2>
+      </div>
+      <p class="sec-p">
+        The qualities below are not just selling points. They come directly
+        from the way I approach every project, every team, and every client
+        relationship.
+      </p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card gold-card">
+        <div class="why-num">01</div>
+        <div class="why-icon">&#128200;</div>
+        <h3>Data Behind Every Decision</h3>
+        <p>
+          I connect SEO activity to real business metrics. GA4, Google Search
+          Console, SEMrush, and Ahrefs are not just tools I list on a resume.
+          They are how I find opportunities, prove results, and make the case
+          for next steps with leadership.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <div class="why-icon">&#128736;</div>
+        <h3>Technical Depth Without the Bottleneck</h3>
+        <p>
+          A BSc in Computer Science means I read server logs, identify crawl
+          budget waste, and fix structural SEO issues directly with development
+          teams. No waiting for a developer to translate the brief. No
+          escalation delays. Issues are caught and resolved faster.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <div class="why-icon">&#9989;</div>
+        <h3>Reliable, Consistent Delivery</h3>
+        <p>
+          Over 18 months leading a 6-person SEO team at MicroDeft, I
+          maintained 100% on-time delivery across concurrent client accounts.
+          That record did not happen by chance. It came from clear processes,
+          weekly syncs, and QA protocols built into every deliverable.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <div class="why-icon">&#128161;</div>
+        <h3>Ahead of Where Search Is Going</h3>
+        <p>
+          I actively work with Answer Engine Optimization, Generative Engine
+          Optimization, AI Overviews, and semantic search frameworks right
+          now. These are not future strategies. They are the search
+          environment your brand needs to compete in today.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== TESTIMONIALS ====== -->
+<section class="section testimonials rr">
+  <div class="section-inner">
+    <div class="testi-hdr">
+      <div class="label">What Clients Say</div>
+      <h2 class="sec-h">Kind Words from<br>People I Have Worked With</h2>
+    </div>
+  </div>
+  <div class="testi-row">
+    <div class="testi-track">
+      <!-- 5 cards -->
+      <div class="tcard">
+        <div class="tcard-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="tcard-quote">"Rash took our technical SEO from a complete mess to a clean, well-structured foundation. Organic traffic went up 40% and stayed there. His ability to work directly with our dev team saved us weeks of back and forth."</p>
+        <div class="tcard-author">
+          <div class="tcard-av">AH</div>
+          <div>
+            <div class="tcard-name">Arif Hossain</div>
+            <div class="tcard-role">Marketing Director, Training Brand</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="tcard-quote">"The CTR improvement on our high-impression pages was something we tried to fix for over a year. Rash figured it out in 6 months. The method was clear, the results were measurable, and the communication was excellent throughout."</p>
+        <div class="tcard-author">
+          <div class="tcard-av">SR</div>
+          <div>
+            <div class="tcard-name">Sabrina Rahman</div>
+            <div class="tcard-role">Head of Content, Real Estate Portal</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="tcard-quote">"The reporting pipeline Rash built changed how our content team makes decisions. We went from waiting a week for data to having same-day visibility. That shift alone improved our publishing efficiency by 25%."</p>
+        <div class="tcard-author">
+          <div class="tcard-av">NI</div>
+          <div>
+            <div class="tcard-name">Nabil Islam</div>
+            <div class="tcard-role">Product Manager, SaaS Platform</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="tcard-quote">"Managing three client accounts at once while keeping every deadline is genuinely hard. Rash made it look routine. The team he built was organised, skilled, and consistent. The results across all three accounts spoke for themselves."</p>
+        <div class="tcard-author">
+          <div class="tcard-av">TK</div>
+          <div>
+            <div class="tcard-name">Tasnim Khan</div>
+            <div class="tcard-role">Account Director, Digital Agency</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="tcard-quote">"Our domain authority went from invisible in off-site search to genuinely competing with established real-estate brands. The link-building program Rash designed was targeted, relevant, and delivered a 50% portfolio growth in 12 months."</p>
+        <div class="tcard-author">
+          <div class="tcard-av">MS</div>
+          <div>
+            <div class="tcard-name">Mahfuz Siddiqui</div>
+            <div class="tcard-role">CEO, Property Development Brand</div>
+          </div>
+        </div>
+      </div>
+      <!-- DUPLICATE for loop -->
+      <div class="tcard">
+        <div class="tcard-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="tcard-quote">"Rash took our technical SEO from a complete mess to a clean, well-structured foundation. Organic traffic went up 40% and stayed there. His ability to work directly with our dev team saved us weeks of back and forth."</p>
+        <div class="tcard-author">
+          <div class="tcard-av">AH</div>
+          <div>
+            <div class="tcard-name">Arif Hossain</div>
+            <div class="tcard-role">Marketing Director, Training Brand</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="tcard-quote">"The CTR improvement on our high-impression pages was something we tried to fix for over a year. Rash figured it out in 6 months. The method was clear, the results were measurable, and the communication was excellent throughout."</p>
+        <div class="tcard-author">
+          <div class="tcard-av">SR</div>
+          <div>
+            <div class="tcard-name">Sabrina Rahman</div>
+            <div class="tcard-role">Head of Content, Real Estate Portal</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="tcard-quote">"The reporting pipeline Rash built changed how our content team makes decisions. We went from waiting a week for data to having same-day visibility. That shift alone improved our publishing efficiency by 25%."</p>
+        <div class="tcard-author">
+          <div class="tcard-av">NI</div>
+          <div>
+            <div class="tcard-name">Nabil Islam</div>
+            <div class="tcard-role">Product Manager, SaaS Platform</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="tcard-quote">"Managing three client accounts at once while keeping every deadline is genuinely hard. Rash made it look routine. The team he built was organised, skilled, and consistent. The results across all three accounts spoke for themselves."</p>
+        <div class="tcard-author">
+          <div class="tcard-av">TK</div>
+          <div>
+            <div class="tcard-name">Tasnim Khan</div>
+            <div class="tcard-role">Account Director, Digital Agency</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="tcard-quote">"Our domain authority went from invisible in off-site search to genuinely competing with established real-estate brands. The link-building program Rash designed was targeted, relevant, and delivered a 50% portfolio growth in 12 months."</p>
+        <div class="tcard-author">
+          <div class="tcard-av">MS</div>
+          <div>
+            <div class="tcard-name">Mahfuz Siddiqui</div>
+            <div class="tcard-role">CEO, Property Development Brand</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section class="section faq rr" id="faq">
+  <div class="section-inner">
+    <div class="faq-wrap">
+
+      <div class="faq-left">
+        <div class="label">Common Questions</div>
+        <h2 class="sec-h">Find Answers<br>Here</h2>
+        <p class="sec-p">
+          Whether you are exploring an SEO partnership or comparing
+          candidates, here are the questions I hear most often answered
+          clearly and directly.
+        </p>
+        <div class="faq-contact">
+          <p>Have a question that is not covered here? Reach out directly and I will get back to you within one business day.</p>
+          <a href="mailto:rk.shuvo209@gmail.com">rk.shuvo209@gmail.com &#8594;</a>
+        </div>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-btn open" onclick="faqToggle(this)">
+            What does your SEO audit process look like?
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-body open">
+            <p>I start with a full technical crawl using Screaming Frog to map crawl errors, broken links, duplicate content, and structural issues. I then cross-reference Core Web Vitals in PageSpeed Insights and pull impression and click data from Google Search Console to identify pages with strong impressions but weak CTR. The audit ends with a prioritised action list sorted by potential impact, not just effort.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="faqToggle(this)">
+            How long before results start showing?
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-body">
+            <p>Technical fixes and on-page optimisations often produce visible improvements within 4 to 8 weeks as search engines recrawl updated pages. Sustainable organic traffic growth typically becomes clear within 3 to 6 months, depending on your domain's existing authority and competition in your niche. I set honest timelines at the start of every project rather than making promises that rely on luck.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="faqToggle(this)">
+            Do you work directly with development teams?
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-body">
+            <p>Yes, and this is one of the most practical advantages I bring. My Computer Science degree means I understand how websites are built, how server configurations affect crawling, and how to write technical briefs that developers can act on without interpretation. Issues that usually require escalation get resolved in a single conversation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="faqToggle(this)">
+            What industries have you worked in?
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-body">
+            <p>My experience spans training and education brands, real estate portals, technology services companies, and e-commerce businesses. The core SEO principles are consistent across these sectors, but the keyword strategy, content approach, and link-building targets differ significantly. I adapt the approach to the industry rather than applying a one-size template.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="faqToggle(this)">
+            Do you keep up with AI search changes like Google AI Overviews?
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-body">
+            <p>Actively. Answer Engine Optimization, Generative Engine Optimization, AI Overviews, and E-E-A-T content frameworks are part of my ongoing work right now, not things I am planning to explore. Search is shifting toward intent-first, entity-based results and I position client content to perform in both traditional and AI-powered search environments.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="faqToggle(this)">
+            What roles are you currently open to?
+            <span class="faq-plus">+</span>
+          </button>
+          <div class="faq-body">
+            <p>I am looking for Senior SEO Specialist, SEO Strategist, and SEO Team Lead positions at digital agencies, SaaS companies, and high-growth tech brands. If your team is serious about building organic search as a long-term growth channel rather than a short-term traffic experiment, I would be glad to talk.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BLOG ====== -->
+<section class="section blog rr" id="blog">
+  <div class="section-inner">
+    <div class="blog-hdr">
+      <div>
+        <div class="label">SEO Insights</div>
+        <h2 class="sec-h">What is Happening<br>in Search Right Now</h2>
+      </div>
+      <a href="mailto:rk.shuvo209@gmail.com" class="btn btn-ghost">Get in Touch &#8594;</a>
+    </div>
+
+    <div class="blog-grid">
+
+      <div class="bcard">
+        <div class="bcard-img" style="background: linear-gradient(140deg, #0e1a18 0%, #0c0c0a 100%);">
+          <svg width="100%" height="100%" viewBox="0 0 420 185" preserveAspectRatio="none" aria-hidden="true">
+            <text x="50%" y="52%" font-family="Outfit,sans-serif" font-size="38" font-weight="800" fill="#c9a96e" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle" letter-spacing="-2">CTR</text>
+            <text x="50%" y="78%" font-family="Outfit,sans-serif" font-size="14" fill="#c9a96e" fill-opacity="0.3" text-anchor="middle" letter-spacing="4" font-weight="500">SIGNALS</text>
+          </svg>
+        </div>
+        <div class="bcard-body">
+          <div class="bcard-date">February 2025</div>
+          <h3>How to Find Your Best CTR Opportunities in Google Search Console</h3>
+          <p>Most sites have hundreds of pages ranking on page one with almost no clicks. Here is the step-by-step method for identifying and fixing them quickly.</p>
+          <div class="bcard-link">Read Insight &#8594;</div>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-img" style="background: linear-gradient(140deg, #16140e 0%, #0c0c0a 100%);">
+          <svg width="100%" height="100%" viewBox="0 0 420 185" preserveAspectRatio="none" aria-hidden="true">
+            <text x="50%" y="52%" font-family="Outfit,sans-serif" font-size="28" font-weight="800" fill="#c9a96e" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle" letter-spacing="-1">CONTENT</text>
+            <text x="50%" y="72%" font-family="Outfit,sans-serif" font-size="28" font-weight="800" fill="#c9a96e" fill-opacity="0.1" text-anchor="middle" dominant-baseline="middle" letter-spacing="-1">CLUSTERS</text>
+          </svg>
+        </div>
+        <div class="bcard-body">
+          <div class="bcard-date">January 2025</div>
+          <h3>Building a Content Cluster Strategy That Actually Earns Rankings</h3>
+          <p>Content clustering is one of the most misunderstood tactics in SEO. Done correctly, it reduces keyword cannibalization and signals clear topical authority to Google.</p>
+          <div class="bcard-link">Read Insight &#8594;</div>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-img" style="background: linear-gradient(140deg, #0e100e 0%, #0c0c0a 100%);">
+          <svg width="100%" height="100%" viewBox="0 0 420 185" preserveAspectRatio="none" aria-hidden="true">
+            <text x="50%" y="46%" font-family="Outfit,sans-serif" font-size="22" font-weight="800" fill="#c9a96e" fill-opacity="0.15" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">AI SEARCH</text>
+            <text x="50%" y="68%" font-family="Outfit,sans-serif" font-size="22" font-weight="800" fill="#c9a96e" fill-opacity="0.1" text-anchor="middle" dominant-baseline="middle" letter-spacing="2">AND SEO</text>
+          </svg>
+        </div>
+        <div class="bcard-body">
+          <div class="bcard-date">December 2024</div>
+          <h3>Why Technical SEO Still Matters in the Age of AI Overviews</h3>
+          <p>Some people believe AI-generated results are making traditional SEO irrelevant. Here is why the technical foundation matters more than ever and what to prioritise right now.</p>
+          <div class="bcard-link">Read Insight &#8594;</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="cta-section rr" id="contact">
+  <div class="label" style="justify-content:center; margin-bottom:18px;">Get in Touch</div>
+  <h2>Ready to Grow<br><em>Organic Traffic?</em></h2>
+  <p>
+    I work with agencies, SaaS companies, and growing tech brands that want
+    organic search to become a genuine, long-term revenue channel.
+  </p>
+  <div class="cta-btns">
+    <a href="mailto:rk.shuvo209@gmail.com" class="btn btn-gold">rk.shuvo209@gmail.com &#8594;</a>
+    <a href="https://www.linkedin.com/in/rkshuvo209/" target="_blank" class="btn btn-ghost">Connect on LinkedIn</a>
+  </div>
+  <div class="skill-cloud">
+    <span class="skill-pill">Technical SEO</span>
+    <span class="skill-pill">On-Page Optimization</span>
+    <span class="skill-pill">Off-Page SEO</span>
+    <span class="skill-pill">Content Strategy</span>
+    <span class="skill-pill">E-E-A-T</span>
+    <span class="skill-pill">GA4</span>
+    <span class="skill-pill">Google Search Console</span>
+    <span class="skill-pill">Ahrefs</span>
+    <span class="skill-pill">SEMrush</span>
+    <span class="skill-pill">Screaming Frog</span>
+    <span class="skill-pill">AI Search Optimization</span>
+    <span class="skill-pill">Semantic SEO</span>
+    <span class="skill-pill">Team Leadership</span>
+    <span class="skill-pill">Link Building</span>
+    <span class="skill-pill">Local SEO</span>
+    <span class="skill-pill">YouTube SEO</span>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">RASH<span>KANTO</span></div>
+      <p>
+        SEO Specialist and Strategist based in Dhaka, Bangladesh.
+        Five years of building organic search strategies that connect
+        directly to revenue for agencies, real estate brands, and tech companies.
+      </p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/rkshuvo209/" target="_blank" class="soc" title="LinkedIn">in</a>
+        <a href="https://rash-kanto.netlify.app/" target="_blank" class="soc" title="Portfolio">&#9632;</a>
+        <a href="mailto:rk.shuvo209@gmail.com" class="soc" title="Email">@</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Case Studies</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#blog">Insights</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Technical SEO</a></li>
+        <li><a href="#services">On-Page Strategy</a></li>
+        <li><a href="#services">Link Building</a></li>
+        <li><a href="#services">SEO Reporting</a></li>
+        <li><a href="#services">AI Search Optimization</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:rk.shuvo209@gmail.com">rk.shuvo209@gmail.com</a></li>
+        <li><a href="tel:+8801305080194">+880 1305080194</a></li>
+        <li><a href="#">Gulshan 2, Dhaka 1212</a></li>
+        <li><a href="https://rash-kanto.netlify.app/" target="_blank">rash-kanto.netlify.app</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>2025 &copy; Rash Kanto Kosh. All rights reserved.</p>
+    <p>BSc Computer Science and Engineering, UITS Dhaka</p>
+  </div>
+</footer>
+
+<script>
+/* ===== EXPERIENCE DATA ===== */
+const EXP = [
+  {
+    badge: 'Current Position',
+    role: 'Senior SEO Specialist',
+    co: 'Sales Ninja Training, Uttara, Dhaka &bull; March 2024 to Present',
+    items: [
+      'Engineered a full technical SEO overhaul covering Core Web Vitals, mobile UX, crawl budget allocation, and structured data implementation, resolving 200+ technical errors and growing organic traffic by 40% within 9 months.',
+      'Improved CTR by 30% across 150+ high-impression pages by auditing search intent gaps using GSC data and rewriting all underperforming title tags and meta descriptions with intent-matched copy.',
+      'Built a cross-department reporting pipeline connecting GA4, Google Search Console, and SEMrush into a real-time dashboard, cutting reporting lag from 7 days to same-day and improving content publishing efficiency by 25%.',
+      'Aligned the quarterly SEO roadmap with product and content sprint cycles, eliminating cross-team bottlenecks and increasing publishing output by 25%.',
+      'Co-led SEO team hiring, wrote technical job descriptions, conducted structured interviews, and designed a 3-week onboarding program that improved early contribution quality.'
+    ]
+  },
+  {
+    badge: 'January 2023 to February 2024',
+    role: 'SEO Specialist',
+    co: 'DOM-INNO Developments Ltd., Banani, Dhaka',
+    items: [
+      'Diagnosed on-page gaps across a full real-estate portal, executed a complete meta tag, header structure, and content relevance overhaul, and delivered 40% organic traffic growth in under 6 months.',
+      'Restructured the entire content cluster strategy around buyer-intent search queries, improved average target keyword ranking positions by 25%, and reduced keyword cannibalization across the portal.',
+      'Launched a niche link acquisition program targeting real-estate directories, local press, and sector publications, growing the backlink portfolio by 50% and domain authority by 20% over 12 months.',
+      'Designed a structured monthly KPI dashboard for C-level stakeholders tracking organic traffic, keyword positions, CTR, and backlink growth, enabling data-backed SEO budget allocation.',
+      'Embedded SEO review checkpoints into development and content publishing pipelines, reducing post-publishing errors by 60% and cutting rework hours across both teams.'
+    ]
+  },
+  {
+    badge: 'March 2021 to December 2022',
+    role: 'SEO Specialist',
+    co: 'MicroDeft, Banasree, Dhaka',
+    items: [
+      'Architected and executed full-funnel SEO strategies for three client websites from scratch, covering technical infrastructure, on-page optimization, and off-page link acquisition, averaging 40% organic traffic growth per client within 12 months.',
+      'Overhauled keyword research and content architecture across all accounts using Ahrefs and SEMrush, restructuring content clusters around search intent and improving average keyword positions by 15%.',
+      'Led a 6-person SEO team across simultaneous client projects, ran weekly performance syncs, established QA protocols for all deliverables, and maintained 100% on-time delivery across 18 months.',
+      'Grew brand search visibility by 30% across client accounts through coordinated content and backlink campaigns in competitive verticals including technology services and e-commerce.',
+      'Designed semantic and Q and A-based content strategies aligned with AI search patterns and featured snippet targeting, positioning client content for answer-box placements.'
+    ]
+  },
+  {
+    badge: 'January 2020 to December 2020',
+    role: 'Assistant Network Engineer',
+    co: 'Bangladesh Water Development Board, Barisal',
+    items: [
+      'Configured, troubleshot, and monitored network systems, servers, and CCTV infrastructure to ensure optimal functionality and security across the facility.',
+      'Performed swift issue resolution and vigilant system monitoring to maintain seamless operations and minimise downtime.',
+      'Built a practical foundation in network architecture and infrastructure that now directly informs my approach to technical SEO, server-side optimisation, and developer collaboration.'
+    ]
+  }
+];
+
+function renderExp(i) {
+  const d = EXP[i];
+  document.getElementById('expPanel').innerHTML = `
+    <div class="exp-card">
+      <span class="exp-card-badge">${d.badge}</span>
+      <div class="exp-card-role">${d.role}</div>
+      <div class="exp-card-co">${d.co}</div>
+      <ul class="exp-list-items">
+        ${d.items.map(it => `<li>${it}</li>`).join('')}
+      </ul>
+    </div>
+  `;
+}
+renderExp(0);
+
+document.querySelectorAll('.exp-row').forEach(row => {
+  row.addEventListener('click', () => {
+    document.querySelectorAll('.exp-row').forEach(r => r.classList.remove('on'));
+    row.classList.add('on');
+    renderExp(parseInt(row.dataset.i));
+  });
+});
+
+/* ===== FAQ ===== */
+function faqToggle(btn) {
+  const body = btn.nextElementSibling;
+  const wasOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-btn').forEach(b => {
+    b.classList.remove('open');
+    b.nextElementSibling.classList.remove('open');
+  });
+  if (!wasOpen) {
+    btn.classList.add('open');
+    body.classList.add('open');
+  }
+}
+
+/* ===== SCROLL REVEAL ===== */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.07 });
+document.querySelectorAll('.rr').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
